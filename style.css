@@ -1,0 +1,103 @@
+/* 
+Theme Name: NexT WP 
+Theme URI: https://github.com/pengtikui/NexT 
+Author: Paranoid_K 
+Author URI: http://pengtikui.cn/ 
+Version: 0.1 
+  Description: NexT WP 是一款移植自 Hexo 的主题 <a href="https://github.com/iissnan/hexo-theme-next">NexT</a> 的 WordPress 主题
+Tag: Hexo, NexT
+*/
+
+/* highlight */
+.hljs{
+    background: none !important;
+}
+
+/* 404 page */
+.next-404 h1{
+    font-size: 7em;
+    color: #000;
+    font-weight: bold;
+}
+.next-404 p{
+    margin-bottom: 10px;
+}
+
+/* pagination */
+.pagination {
+  margin: 120px 0 40px;
+  text-align: center;
+  border-top: 1px solid #eee;
+}
+.pagination h2{
+  display: none;
+}
+.page-number-basic,
+.pagination .prev,
+.pagination .next,
+.pagination .page-numbers,
+.pagination .space {
+  display: inline-block;
+  position: relative;
+  top: -1px;
+  margin: 0 6px;
+  padding: 0 10px;
+  line-height: 30px;
+}
+@media (max-width: 767px) {
+  .page-number-basic,
+  .pagination .prev,
+  .pagination .next,
+  .pagination .page-numbers,
+  .pagination .space {
+    margin: 0 5px;
+  }
+}
+.pagination .prev,
+.pagination .next,
+.pagination .page-numbers {
+  border-bottom: 0;
+  border-top: 1px solid #eee;
+  transition-property: border-color;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out;
+  transition-delay: 0s;
+}
+.pagination .prev:hover,
+.pagination .next:hover,
+.pagination .page-numbers:hover {
+  border-top-color: #222;
+}
+.pagination .space {
+  padding: 0;
+  margin: 0;
+}
+.pagination .prev {
+  margin-left: 0;
+}
+.pagination .next {
+  margin-right: 0;
+}
+.pagination .page-numbers.current {
+  color: #fff;
+  background: #ccc;
+  border-top-color: #ccc;
+}
+@media (max-width: 767px) {
+  .pagination {
+    border-top: none;
+  }
+  .pagination .prev,
+  .pagination .next,
+  .pagination .page-numbers {
+    margin-bottom: 10px;
+    border-top: 0;
+    border-bottom: 1px solid #eee;
+  }
+  .pagination .prev:hover,
+  .pagination .next:hover,
+  .pagination .page-numbers:hover {
+    border-bottom-color: #222;
+  }
+}
+
