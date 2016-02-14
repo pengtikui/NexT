@@ -18,6 +18,8 @@ NexT WP 是一款移植自 Hexo 的主题 [NexT](https://github.com/iissnan/hexo
 
 有 Bug 或问题反馈请开 Issues。
 
+Demo：[PP_K's Blog](http://pengtikui.cn/)
+
 ## 注意事项
 
 * 导航栏可以使用 Font-Awesome 图标，本主题已内置 Font-Awesome，直接在导航标签处添加 `i` 标签即可，如：`<i class="fa fa-home"></i> 首页`；
