@@ -15,7 +15,8 @@ remove_action( 'wp_head', 'adjacent_posts_rel_link' );
 if ( function_exists( 'register_nav_menus' ) ) {
     register_nav_menus( array(
         'site_nav'     => __( '站点导航', 'next' ),
-        'social_links' => __( '社交链接', 'next' )
+        'social_links' => __( '社交链接', 'next' ),
+        'links'        => __( '友情链接', 'next' )
     ) );
 }
 

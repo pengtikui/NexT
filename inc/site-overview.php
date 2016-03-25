@@ -38,3 +38,18 @@
 		echo strip_tags(wp_nav_menu($menuParameters), '<a>,<i>,<span>');
 	?>
 </div>
+<div class="links-of-author motion-element">
+    <h5><?php _e('友情链接', 'next') ?></h5>
+    <?php $menuParameters = array(
+			'theme_location' => 'links',
+			'fallback_cb' => false,
+			'container'	=> false,
+			'echo'	=> false,
+			'items_wrap' => '%3$s',
+			'depth'	=> 0,
+			'before' => '<span class="links-of-author-item">',
+			'after' => '</span>'
+		);
+		echo strip_tags(wp_nav_menu($menuParameters), '<a>,<i>,<span>');
+	?>
+</div>
