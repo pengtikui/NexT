@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="theme-color" content="#222">
+    <meta name="renderer" content="webkit">
     <title><?php if (is_home()||is_search()){ bloginfo('name');} else{wp_title(''); echo ' | '; bloginfo('name');} ?></title>
     <!-- favicon -->
     <link rel="shortcut icon" type="image/x-icon" href="<?php bloginfo('url'); ?>/favicon.ico">
@@ -22,9 +23,12 @@
     <link rel="stylesheet" href="//cdn.bootcss.com/highlight.js/9.1.0/styles/github-gist.min.css">
     <link rel="profile" href="http://gmpg.org/xfn/11">
     <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
+    <?php if ( get_option('next_scheme', 'muse') == 'pisces' )  ?>
     <script type="text/javascript" id="hexo.configuration">
         var NexT = window.NexT || {};
         var CONFIG = {
+            scheme: <?php if ( get_option('next_scheme', 'muse') == 'pisces' ) { echo "'Pisces'"; } if ( get_option('next_scheme', 'muse') == 'muse' ) { echo "'Muse'"; } if ( get_option('next_scheme', 'muse') == 'mist' ) { echo "'Mist'"; } ?>,
+            sidebar: {"position":"left","display":"post"},
             fancybox: true,
             motion: true
         };

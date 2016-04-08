@@ -1,3 +1,5 @@
+/* global NexT: true */
+
 NexT.utils = NexT.$u = {
   /**
    * Wrap images with fancybox support.
@@ -28,6 +30,26 @@ NexT.utils = NexT.$u = {
           locked: false
         }
       }
+    });
+  },
+
+  lazyLoadPostsImages: function () {
+    $('#posts').find('img').lazyload({
+      placeholder: '/images/loading.gif',
+      effect: 'fadeIn'
+    });
+  },
+
+  registerBackToTop: function () {
+    var THRESHOLD = 50;
+    var $top = $('.back-to-top');
+
+    $(window).on('scroll', function () {
+      $top.toggleClass('back-to-top-on', window.pageYOffset > THRESHOLD);
+    });
+
+    $top.on('click', function () {
+      $('body').velocity('scroll');
     });
   },
 
@@ -141,7 +163,7 @@ NexT.utils = NexT.$u = {
   },
 
   displaySidebar: function () {
-    if (!this.isDesktop()) {
+    if (!this.isDesktop() || this.isPisces()) {
       return;
     }
     $('.sidebar-toggle').trigger('click');
@@ -153,5 +175,24 @@ NexT.utils = NexT.$u = {
 
   isPisces: function () {
     return CONFIG.scheme === 'Pisces';
+  },
+
+  getScrollbarWidth: function () {
+    var $div = $('<div />').addClass('scrollbar-measure').prependTo('body');
+    var div = $div[0];
+    var scrollbarWidth = div.offsetWidth - div.clientWidth;
+
+    $div.remove();
+
+    return scrollbarWidth;
+  },
+
+  /**
+   * Affix behaviour for Sidebar.
+   *
+   * @returns {Boolean}
+   */
+  needAffix: function () {
+    return this.isPisces();
   }
 };
