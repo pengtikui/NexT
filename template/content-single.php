@@ -19,9 +19,7 @@
 			</span>
 			<span class="post-comments-count">
 				&nbsp;|&nbsp;
-				<a href="">
-					<span class="post-comments-count"><?php comments_number(); ?></span>
-				</a>
+				<span class="post-comments-count"><?php comments_number(); ?></span>
 			</span>
 		</div>
 	</header>
