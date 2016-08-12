@@ -428,7 +428,6 @@ table {
   border-spacing: 0;
   border: 1px solid #ddd;
   font-size: 14px;
-  table-layout: fixed;
   word-wrap: break-word;
 }
 table>tbody>tr:nth-of-type(odd) {
