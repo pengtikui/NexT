@@ -1,7 +1,7 @@
 <div class="site-author motion-element">
-	<img class="site-author-image" src="<?php bloginfo('template_url'); ?>/statics/images/avatar.jpg" alt="avatar">
-	<p class="site-author-name"><?php $username = get_option('next_author','admin'); echo get_profile( 'display_name', $username ); ?></p>
-	<p class="site-description motion-element"><?php $username = get_option('next_author','admin'); echo get_profile( 'description', $username ); ?></p>
+    <img class="site-author-image" src="<?php $usermail = get_option('next_author','admin'); echo get_avatar_url( $usermail ); ?>" alt="avatar">
+	<p class="site-author-name"><?php $usermail = get_option('next_author','admin'); echo get_the_author_meta( 'display_name', get_user_by( 'email', $usermail)->ID ); ?></p>
+	<p class="site-description motion-element"><?php $username = get_option('next_author','admin'); echo get_the_author_meta( 'description', get_user_by( 'email', $usermail)->ID ); ?></p>
 </div>
 <nav class="site-state motion-element">
 	<div class="site-state-item site-state-posts">
