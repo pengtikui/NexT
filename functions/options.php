@@ -30,7 +30,7 @@ function next_options_page(){ ?>
                         <th><label for="next_author">作者</label></th>
                         <td>
                             <input name="next_author" type="text" class="regular-text" value="<?php echo get_option('next_author','admin'); ?>">
-                            <p class="description">博客作者的用户名，默认为 admin</p>
+                            <p class="description">博客作者的电子邮箱</p>
                         </td>
                     </tr>
                     <tr>
